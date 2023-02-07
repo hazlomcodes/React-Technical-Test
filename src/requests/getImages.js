@@ -7,7 +7,14 @@ const getImages = (query) => {
     return axios
       .get(`https://images-api.nasa.gov/search?q=${query}`)
       .then((response) => {
-        console.log(response)
+        const imagesResults = response.data.collection.items;
+        const parsedImages = imagesResults.filter((image) => {
+            return image.data[0].media_type === "image";
+        });
+        const images = parsedImages.map((image) => {
+            return image.links[0].href;
+        });
+        return images;
       })
       .catch((err) => {
         console.log(err);

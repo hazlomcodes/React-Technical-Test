@@ -1,14 +1,18 @@
 import React, { useState } from "react";
 import "../styles/search.css";
-import"../requests/getImages";
+import getImages from "../requests/getImages";
 
-
-const Search = () => {
+const Search = ({ setSearchResult }) => {
   const [value, setValue] = useState();
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setSearchResult(getImages(value));
+  };
+
   return (
-    <>
-      <form className="search-form">
+    <div className="search">
+      <form className="search-form" onSubmit={handleSubmit}>
         <input
           className="search-input"
           type="text"
@@ -16,9 +20,9 @@ const Search = () => {
         />
         <button className="search-btn" type="submit">
           Go!
-        </button>      
+        </button>
       </form>
-    </>
+    </div>
   );
 };
 
