@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "../styles/search.css";
+import"../requests/getImages";
+
 
 const Search = () => {
   const [value, setValue] = useState();
