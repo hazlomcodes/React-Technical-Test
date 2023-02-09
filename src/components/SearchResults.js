@@ -1,14 +1,32 @@
 import React from "react";
 import "../styles/search-results.css";
 
-const SearchResults = ({ searchResults }) => {
-  return (
-    <>
-      <p>Search Results</p>
+const SearchResults = ({ results }) => {
+  
+  if (!results.length) {
+    return <p>No results</p>
+  }
+  else{
+    return (
 
-      {searchResults?.map((e) => console.log(e))}
-      </>
-  );
-};
+      <div className="search-results">
+        {results.map((image,index) => {
+          return (
+            <img 
+            className="nasa-logo"
+            src={"image"}
+            alt={"nasaLogo"}
+            key = {index}
+            />
+          )
+        })
+      } 
+
+      </div>
+
+      
+      
+  )
+}}
 
 export default SearchResults;
