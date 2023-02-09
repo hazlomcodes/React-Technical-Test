@@ -12,5 +12,6 @@
   display: flex;
   width: 500px;
   height: 300px;
+  -ms-flex-align: start;
 }
 
