@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../styles/app.css";
 import Search from "./Search";
+import nasaImage from "../styles/images/nasa-logo.png";
 import SearchResults from "./SearchResults";
 
 function App() {
@@ -9,8 +10,7 @@ function App() {
     <div className="app">
       <img
         className="nasa-logo"
-        src="https://cdn.cnn.com/cnnnext/dam/assets/200424060716-nasa-worm-logo.jpg"
-        alt="nasaLogo"
+        src={nasaImage} alt="nasa"
       />
       <Search setSearchResults={setSearchResults} />
       <SearchResults results={searchResults}/>

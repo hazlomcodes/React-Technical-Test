@@ -1,17 +1,27 @@
 .app {
+  margin: 20px;
+  height: 100vh;
+  font-size: 35px;
+  text-shadow: rgb(232, 240, 244) 2px 2px 2px;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
-  justify-content: center;
-  font-size: 50px;
-  font-weight: 500;
+  font-weight: bolder;
+  background-color: rgb(21, 16, 100);
+  color: aliceblue;
 }
 
 .nasa-logo {
-  display: flex;
-  width: 500px;
-  height: 300px;
-  -ms-flex-align: start;
+  margin: 20px;
+  height: 120px;
+  padding-top: 50px;
+}
+
+/* Mobile device */
+@media (max-width: 1200px) {
+  .nasa-logo {
+    height: 100px;
+  }
 }
 

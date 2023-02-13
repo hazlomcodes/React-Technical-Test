@@ -3,7 +3,7 @@
 exports[`Search results render correctly 1`] = `
 <DocumentFragment>
   <p>
-    Search Results
+    No results
   </p>
 </DocumentFragment>
 `;
